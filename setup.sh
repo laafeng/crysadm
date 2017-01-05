@@ -20,6 +20,9 @@ yum install -y redis
 systemctl enable redis
 service redis start
 
+#为yum添加epel源
+yum install epel-release
+
 #安装nginx
 yum install nginx -y
 ln -s /opt/crysadm/crysadm_nginx.conf /etc/nginx/conf.d/
