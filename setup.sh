@@ -15,13 +15,13 @@ pip install uwsgi
 #创建uWSGI存放log目录
 mkdir -p /var/log/uwsgi
 
+#为yum添加epel源
+yum install epel-release
+
 #安装redis
 yum install -y redis
 systemctl enable redis
 service redis start
-
-#为yum添加epel源
-yum install epel-release
 
 #安装nginx
 yum install nginx -y
